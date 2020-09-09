@@ -4,7 +4,7 @@ date: 2020-09-09 17:15:48
 tags:
 categories: testpost
 toc: true
-thumbnail:
+thumbnail: http://localhost:4000/neuroblog/2020/09/09/test-photo/Figure_0.png
 ---
 
 This would be the abstract of the whole article.
