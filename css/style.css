@@ -274,14 +274,14 @@ code {
 .logo {
   display: block;
   padding: 10px 0;
-  width: 220px;
-  height: 80px;
-  background-image: url("images/neuro-logo-header.png");
+  width: 300px;
+  height: 63px;
+  background-image: url("images/new-logo-header.png");
   background-position: 0px 10px;
   background-repeat: no-repeat;
-  -webkit-background-size: 220px 80px;
-  -moz-background-size: 220px 80px;
-  background-size: 220px 80px;
+  -webkit-background-size: 300px 63px;
+  -moz-background-size: 300px 63px;
+  background-size: 300px 63px;
 }
 .main-body {
   margin-top: -60px;
@@ -378,7 +378,7 @@ code {
 #header-title .subtitle {
   font-size: 16px;
   font-style: italic;
-  line-height: 90px;
+  line-height: 73px;
   color: rgba(255,255,255,0.7);
   text-shadow: 0 1px rgba(0,0,0,0.2);
 }
@@ -1661,11 +1661,11 @@ a.article-title:hover {
   line-height: 22px;
 }
 #footer .logo {
-  width: 176px;
-  height: 64px;
-  -webkit-background-size: 176px 64px;
-  -moz-background-size: 176px 64px;
-  background-size: 176px 64px;
+  width: 240px;
+  height: 50.400000000000006px;
+  -webkit-background-size: 240px 50.400000000000006px;
+  -moz-background-size: 240px 50.400000000000006px;
+  background-size: 240px 50.400000000000006px;
 }
 i.icon {
   display: inline-block;
