@@ -1,0 +1,194 @@
+\documentclass[11pt]{article}
+
+\usepackage{bbm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage{braket}
+\usepackage{authblk}
+\setlength{\parindent}{2em}
+\geometry{left=2.5cm,right=2.5cm,top=2.0cm,bottom=2.0cm}
+\usepackage{hyperref}
+% About the author
+\renewcommand*{\Authand}{, }
+\renewcommand\Affilfont{\itshape\small}
+
+\date{}
+
+\title{Mathematical Modeling: From Membrame to Simple Neural Network}
+\author[1]{Zeyuan Ye}
+\author[2]{Sebastian K{\"o}nig}
+\setcounter{Maxaffil}{0}
+
+\begin{document}
+  \maketitle
+
+\begin{abstract}
+
+  Theoretical neural scientist study our neural system in different level: from
+  conponents of a single cell, such as memberame, synaps, to the complex network
+  of the whole brain. This summary trying to find a straight pathway from the
+  modeling of sub-cellcular level to simple neural network. Please refer more detail
+  in \cite{}
+
+\noindent \textbf{Keywords:} lorentz integral transformation; pionless EFT;
+  bound-state problem\\ %(5 at most)
+\end{abstract}
+
+\section{Membrame}
+Membrame can be roughly decomposed into two parts that are vital in the neural
+activity: double-layer and channels. Double layer is permeterbale for water, oil
+etc., yet impermmitable for ions, which is similar with bantoumo. If the charge
+densities of the two sides of double layer (intra celluar space and
+extra-cellcular space) are different, there will be a votage across cell
+memberame. In all, because the existance of the double-layer, the cell has a
+function similar to conductance
+\begin{equation}
+  c V = Q
+  \label{capt}
+\end{equation}
+where $c$ is the conductance per unit area, $Q$ is the charge density
+differences and $V$ is the votage accross the cell. The votage of the
+extra-cellcular space is set to be zero, therefore $V$ here is also the votage
+of intra-cellcular space, which has realistic value $-64 \text{mV}$ as measured
+by the experiment.
+
+There are two types of channel: ion channels and metabolic channel. The effect
+of metabolic channels are more indirect and complex which is not the center
+concern of this summary. Ion channels are the gates of the memberane, in which
+certain types of ions can pass though
+with a volecity. By defination, the movement of the ions is the current. One
+good approximation of the channels are resistence, govern by the Ohm's law
+\begin{equation}
+  I = G_i (V - V_i)
+  \label{olm}
+\end{equation}
+where $G_i$ is the conductance which can depends on the votage and time, and
+$V_i$ is the equivibrilum votage (it is also a constant) results from
+the balance of electric force and diffusion \cite{}. Index $i$ here means
+$ith$ type of ion channel. Positive I means outward current.
+
+\section{Single Cell}
+
+Differentiate both side of equation (\ref{capt}) and use equation{\ref{olm}}, we
+have an equation for single cell
+\begin{equation}
+  c \frac{dV}{dt} = - G_L (V - V_L) - I_e
+  \label{ifmodel}
+\end{equation}
+where $I_e$ is the extra-induced current, such as the experimentist inject ions
+to the cell. We use index $L$ to descript the overall effect of some types of
+chennels (largely fall into K-selective channel). The rest effect of channel can
+be concluded as the following statement:
+\begin{itemize}
+\item{} If $V > V_{th}$, $V = 50 \text{mV}$, then quickly fall to $V_{res}$.
+  \label{ifstate}
+\end{itemize}
+This effect is often induced by Na-selective channels. Typical value of
+$V_{res}$ is $-65 mV$. There are some choice for $V_{th}$, but values like $-30
+mV$ is sufficient to fit a good result. When the statement is triggered, we say
+the neuron fired, or it made a spike. This single-cell model also be named
+Integrate and Firing Model. There are lots more sophiscated models, such as HH
+model, which replace the statement with more realistic channels as
+additional terms in equation (\ref{ifmodel}).
+
+Equation \ref{ifmodel} can be collected with a more susinct form
+\begin{equation}
+  \tau \frac{dV}{dt} = -V + V_{\infty}
+  \label{ifmodelS}
+\end{equation}
+where $\tau = c / G_L$ and $V_{\infty} = (V_L - I_e) / G_L$, where $G_L$ here is
+a constant. Solution of equation \ref{ifmodelS} is
+\begin{equation}
+  V = (V_L - V_{\infty}) e^{-t/\tau} + V_{\infty}
+\end{equation}
+The firing pattern is shown in FIG. \ref{}
+
+It is in consensus that the information is stored in the firing rate of the
+neuron instead of the exact value of votage. Firing rate is defined as the
+number of spiks in a unit time. The time spacing between two spikes can be
+calculated from equation (\ref{ifmodelS}) by calculate the time that $V$ grows
+from $V_{res}$ to $V_{th}$. The inverse of time spacing is firing rate, as show
+in FIG. \ref{}. In all, we could conclude the relation with
+\begin{equation}
+  v = F[I_e]
+\end{equation}
+where $v$ is the firing rate, and $F$ is some function has the shape in FIG.
+
+\section{Synapse}
+Before moving to neural network, we need to understand how two neurons connect
+each other by synapse. FIG. \ref{syn} shows the biological structure of the
+synapse. When the pre-neuron is fired, the depolyzation will open the
+Ca-channel, induces a inward flow of Ca$^{2+}$. This Ca$^{2+}$ release the
+transmitters in the presynapse. Transmitter in the synapse cleft then attarch to
+particular recepters in the post-synapse, open ion-channel to allow Na$+$ flow
+into the post-synapse. This final lead to the depolyzation of the post-neuron.
+
+The current flow into the post-neuron can be descripted by
+\begin{equation}
+  I_{syn} = - G_{syn}(t) (V - V_{syn}),
+\end{equation}
+where $V_{syn}$ is about $0$ mV, which is the reversal potential of the
+post-synapse. Conductance $G_{syn}(t)$ is shown in FIG. If there's no
+transmitters in the synapse cleft, ion channels in the post-synapse are closed,
+$G_{syn}(t) = 0$ mV.
+A spike of the presynapse will suddenly release a large
+amount of transmitters, therefore largely increase
+$G_{syn}(t)$. Then the transmitters will graduatly either diffuse away or be
+decomposed by glials, which lead to the slow decay of the conductance.
+The conductance induced by single spike is often approximated by the exponential
+function
+\begin{equation}
+  K(t) = G_{max} e^{-t / \tau}.
+\end{equation}
+The whole conductance under a train of spikes is
+\begin{equation}
+  G(t) = \sum_iK(t) \delta_{t,t_i}
+  \label{spikeraw}
+\end{equation}
+where there is a spike at time $t_i$. Equation (\ref{spikeraw}) can be
+simplified with the spike train $S(t) = \sum_i\delta(t - t_i)$
+\begin{equation}
+  G(t) = \int{d\tau}K(\tau)S(t - \tau)
+\end{equation}
+
+\section{Simple Neural Network}
+Consider a network with only two neurons attarched FIG. \ref{twonet}. The
+working status of each neuron is solely stated by its firing rate. So we need to
+findout the firing-rate relation between neurons. For the single neuron, the only source of external current is from its
+pre-neuron, i.e. $v = F[I_{syn}]$ from equation (\ref{}). This equation is still
+too complex to be pratical. Hence we further throw away the votage term, and
+treat $G_{syn}(t)$ as votage independent in equation (\ref{})
+\begin{equation}
+  I_{syn} = \int{d\tau}K(\tau)S(t - \tau)
+\end{equation}
+we could stripe a factor $w$ so that the rest of $U(\tau) = K(\tau) / w$ can be normalized,
+\begin{equation}
+  \int{d\tau}U(\tau) = 1 
+\end{equation}
+The convolution of a narrow (correnspond to short time of non-zero $K(\tau)$)
+window $U(\tau)$ with spike train $S(\tau)$ is exactly the firing rate of the
+presynapse $u$. Overall, we have
+\begin{equation}
+  v = F[w u].
+\end{equation}
+This equation reveals the simple relation of the network. Larger $w$ means the
+spike of this pre-neuron induce larger current. This often means there are more
+channels in the post-synapse. Different presynapse will attarch to different
+sites of the postsynapse. Furthermore, the post-neual layer can also attarch to
+each other as shown in FIG. . The overall effect is the summation of all their
+current.
+\begin{equation}
+  \boldsymbol{v} = F[W\boldsymbol{u} + M \boldsymbol{v}],
+\end{equation}
+where $W, M$ are matrices, arrays are written as bold letters. This model is
+called rate model, which is the fundation of the lots of deep learning
+architechture.
+
+\begin{thebibliography}{100}
+MIT OpenCourseWare: Introduction to Neural Computation, and text
+\end{thebibliography}
+\end{document}
