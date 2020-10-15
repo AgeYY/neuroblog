@@ -12,19 +12,19 @@
     
     <meta name="keywords" content="" />
     
-    <meta name="description" content="IntroductionResearches study our neural system in different levels: from conponentsof a single cell, such as membrane, to the connection of two cells(synapsis), and further to the complex network of">
+    <meta name="description" content="Mathematical modeling from sub-cell components of a neuron to simple neural network. As part of course Introduction to Neural Computation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Modeling of Simple Neural Network">
 <meta property="og:url" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/index.html">
 <meta property="og:site_name" content="Neuroblog">
-<meta property="og:description" content="IntroductionResearches study our neural system in different levels: from conponentsof a single cell, such as membrane, to the connection of two cells(synapsis), and further to the complex network of">
+<meta property="og:description" content="Mathematical modeling from sub-cell components of a neuron to simple neural network. As part of course Introduction to Neural Computation">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/2020/09/09/biophysics/test.png">
+<meta property="og:image" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/ifmodel.jpg">
 <meta property="article:published_time" content="2020-09-09T09:15:48.000Z">
-<meta property="article:modified_time" content="2020-10-15T07:18:25.104Z">
+<meta property="article:modified_time" content="2020-10-15T13:13:48.010Z">
 <meta property="article:author" content="AgeYY">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/2020/09/09/biophysics/test.png">
+<meta name="twitter:image" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/ifmodel.jpg">
     
 
     
@@ -179,7 +179,7 @@
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
   <a href="/neuroblog/2020/09/09/biophysics/" class="article-date">
-     <time datetime="2020-10-15T07:18:25.104Z" itemprop="dateModified">2020-10-15</time>
+     <time datetime="2020-10-15T13:13:48.010Z" itemprop="dateModified">2020-10-15</time>
   </a>
 </div>
 
@@ -201,51 +201,40 @@
 
             
 
-            <a id="more"></a>
+            <p>Mathematical modeling from sub-cell components of a neuron to simple neural network. As part of course <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">Introduction to Neural Computation</a></p>
+<a id="more"></a>
 
-<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Researches study our neural system in different levels: from conponents<br>of a single cell, such as membrane, to the connection of two cells<br>(synapsis), and further to the complex network of the whole brain. This<br>summary trying to find a straight pathway of the modeling from<br>sub-cellcular level to simple neural network. Please refer @mitcourse<br>for more detail in.</p>
-<h1 id="Membrane"><a href="#Membrane" class="headerlink" title="Membrane"></a>Membrane</h1><p>Membrane has roughly two parts that are vital in the neural activity:<br>phospholipid bilayer and channels (FIG. [structMemb]). phospholipid is<br>permeterbale for water, oil etc., yet impermmitable for ions. This<br>attribution is similar to semi-permeable membrane. Ions carry charges,<br>if the charge densities of the two sides of phospholipid bilayer (intra<br>celluar space and extra-cellcular space) are different, there will be a<br>votage across cell membrane (FIG. [semiMemb]). In all, because of the<br>existance of phospholipid bilayer, the cell has a function similar to<br>conductance</p>
-<p>$$c V = Q<br>  \label{capt}$$</p>
-<p>where $c$ is the conductance per unit area, $Q$ is the charge density<br>differences and $V$ is the votage accross the cell. The votage of the<br>extra-cellcular space is set to be zero, therefore $V$ here is also the<br>votage of intra-cellcular space, which is roughly $-70 \text{mV}$ to<br>$ -50 \text{mV}$ as measured by the experiment.</p>
-<p>There are two types of channel: ion channels and metabolic channel. The<br>effect of metabolic channels are more indirect and complex, which is not<br>the center concern of this summary. Ion channel behaviours as the gate<br>of the membrane. It allows only certain types of ions to pass though the<br>membrane, thus produce inward or outward cuurent flow. For example,<br>Na-gated channel is only permitterble to Na$^+$, when the channel is<br>open (FIG. [nachannel]). One good approximation of the channel is<br>resistence, govern by the Ohm’s law</p>
-<p>$$I = G_i (V - V_i)<br>  \label{olm}$$</p>
-<p>where $G_i$ is the conductance which can depends on the votage and time,<br>and $V_i$ is the equivibrilum votage (constant for a certain type of<br>channel) results from the balance of electric force and diffusion. Index<br>$i$ here means $ith$ type of ion channel. Positive $I$ means outward<br>current.</p>
-<h1 id="Single-Cell"><a href="#Single-Cell" class="headerlink" title="Single Cell"></a>Single Cell</h1><p>Differentiate on both side of equation ([capt]) and use equation<br>(<span>[olm]</span>), we have an equation for single cell</p>
-<p>$$c \frac{dV}{dt} = - G_L (V - V_L) - I_e<br>  \label{ifmodel}$$</p>
-<p>where $I_e$ is the extra-induced current, such as the experimentist<br>inject ions to the cell (negtive $I_e$). Index $L$ is leakage channel,<br>which is a mathematically equvilent channel of partial function of some<br>types of channel (largely fall into K-selective channel). The rest of<br>effects of channels can be simplified as the following statement:</p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Researchers study our neural system in different levels: from components of a single cell, such as membrane, to the connection of two cells (synapsis), and further to the complex network of the whole brain. This summary trying to find a straight pathway of the modeling from sub-cellcular level to simple neural network. Please refer <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">Introduction to Neural Computation</a> for more detail.</p>
+<h1 id="Membrane"><a href="#Membrane" class="headerlink" title="Membrane"></a>Membrane</h1><p>The membrane has roughly two parts that are vital in the neural activity: phospholipid bilayer and channels (FIG. 1). Phospholipid bilayer is permeable to water, oil etc., yet impereable for ions. This attribution is similar to semi-permeable membrane. Ions carry charges, if the charge densities of the two sides of phospholipid bilayer (intra cellular space and extra-cellular space) are different, there will be a voltage difference across cell membrane. In all, because of the existence of phospholipid bilayer, the cell has a function similar to capacitor<br>\begin{equation}<br>c V = Q<br>\label{ohm}<br>\end{equation} where $c$ is the capacity per unit area, $Q$ is the charge density differences and $V$ is the voltage accross the cell. The voltage of the extra-cellcular space is set to be zero, therefore $V$ here is also the voltage of intra-cellular space, which is roughly $-70 \text{mV}$ to $ -50 \text{mV}$ as measured by the experiment.</p>
+<img src="membrane.png" alt="FIG. 1: The structure of the cell membrane. Oil soluable moculers can pass though the phospholipid bilayer (blue layer), while ions can only flow into cell by ion channels. (Ref [1])" width="400"/>
+
+<p>There are two types of channels: ion channels and metabolic channel. The effect of metabolic channels are more indirect and complex, which is not the central concern of this summary. Ion channel behaviors as the gate of the membrane. It allows only certain types of ions to pass through the membrane, thus produce inward or outward current flow. For example, Na-gated channel is only permeable to Na$^+$, when the channel is open . One good approximation of the channel is resistor, govern by the Ohm’s law<br>\begin{equation}<br>I = G_i (V - V_i)<br>  \label{olm}<br>\end{equation} where $G_i$ is the conductance which can depend on the votlage and time, and $V_i$ is the equilibrium voltage (constant for a certain type of channel) results from the balance of electric force and diffusion (FIG. 2). Index $i$ here means $i$th type of ion channel. Positive $I$ means outward current.</p>
+<img src="permea.jpg" alt="FIG. 2: An example of equilibrium voltage. (a) In the initial state, there are more Na and A ions in the right handside, yet the voltage is 0, since the effects of Na and A are cancelled out. (b) However, if there is an Na-gated channel in the membrane, the Na in the right handside will diffuse into the left handside. (c) Finally this system will go back to equilibrium state when the electric force is equal to the force for difussion. In this state, we have a equilibrium volatage (Ref: [2])" width="500"/>
+
+<h1 id="Single-Cell"><a href="#Single-Cell" class="headerlink" title="Single Cell"></a>Single Cell</h1><p>Differentiate on both side of equation (\ref{ohm}) and use equation (\ref{olm}), we have an equation for single cell<br>\begin{equation}<br>c \frac{dV}{dt} = - G_L (V - V_L) - I_e<br>\label{ifmodel}<br>\end{equation} where $I_e$ is the extra-induced current, such as the experimentist inject ions to the cell (negtive $I_e$). Index $L$ is leakage channel, which is a mathematically equivalent channel of a partial function of some types of channel (largely fall into K-selective channel). The rest of effects of channels can be simplified as the following statement:</p>
 <ul>
-<li>If $V &gt; V_{th}$, $V = 50 \text{mV}$, then quickly fall to $V_{res}$.<br>[ifstate]</li>
+<li>If $V &gt; V_{th}$, $V = 50 \text{mV}$, then quickly fall to $V_{res}$.</li>
 </ul>
-<p>This effect is often introduced by Na-selective channels. Typical value<br>of $V_{res}$ is $-65 mV$. There are some choices for $V_{th}$, but<br>values like $-30<br>mV$ is sufficient to fit a good result. When this statement is<br>triggered, we say the neuron fired, or it made a spike. This single-cell<br>model also be named Integrate and Firing Model. This model contains one<br>resistence (leakage channel), one conductance (membrane), one external<br>current source ($I_e$), and voltage source (FIG. [ifmodel]). There are<br>lots more sophiscated models, such as HH model, which replace the<br>statement with more realistic channels as additional terms in equation<br>([ifmodel]).</p>
-<p>Equation [ifmodel] can be collected with a more susinct form</p>
-<p>$$\tau \frac{dV}{dt} = -V + V_{\infty}<br>  \label{ifmodelS}$$</p>
-<p>where $\tau = c / G_L$ and $V_{\infty} = (V_L - I_e) / G_L$. If $G_L$<br>here is a constant, solution of equation [ifmodelS] is</p>
-<p>$$V = (V_L - V_{\infty}) e^{-t/\tau} + V_{\infty}$$</p>
-<p>The firing pattern is shown in FIG. [fpattern]</p>
-<p>Information is stored in the firing rate of neurons instead of the exact<br>value of votage. Firing rate is defined as the number of spiks in a unit<br>time. The time spacing between two spikes can be calculated from<br>equation ([ifmodelS]) by calculate the time that $V$ grows from<br>$V_{res}$ to $V_{th}$. The inverse of time spacing is firing rate, as<br>show in FIG. [fireate]. In all, we could conclude the relation with</p>
-<p>$$v = F[I_e]<br>  \label{fireateeq}$$</p>
-<p>where $v$ is the firing rate, and $F$ is some function has the shape in<br>FIG. [fireate]</p>
-<h1 id="Synapse"><a href="#Synapse" class="headerlink" title="Synapse"></a>Synapse</h1><p>Before moving to neural network, we need to understand how two neurons<br>connect each other by synapse. FIG. [syn] shows the biological structure<br>of the synapse. When the pre-neuron is fired, the depolyzation will open<br>the Ca-channel, induces an inward flow of Ca$^{2+}$. This Ca$^{2+}$ will<br>release the transmitters in the presynapse. Transmitter in the synapse<br>cleft then attarch to particular recepters in the post-synapse, open<br>ion-channel to allow Na$^+$ flow into the post-synapse. This final lead<br>to the depolyzation of the post-neuron.</p>
-<p>The current flow into the post-neuron can be descripted by</p>
-<p>$$I_{syn} = - G_{syn}(t) (V - V_{syn}),<br>  \label{isyn}$$</p>
-<p>where $V_{syn}$ is about $0$ mV, which is the reversal potential of the<br>post-synapse. Conductance $G_{syn}(t)$ is shown in FIG. [gsyn] If<br>there’s no transmitters in the synapse cleft, ion channels in the<br>post-synapse are closed, $G_{syn}(t) = 0$ mV. A spike of the presynapse<br>will suddenly release a large amount of transmitters, therefore largely<br>increase $G_{syn}(t)$. Then the transmitters will graduatly either<br>diffuse away or be decomposed by glials, which lead to the slow decay of<br>the conductance. The conductance induced by single spike is often<br>approximated by the exponential function</p>
-<p>$$K(t) = G_{max} e^{-t / \tau}.$$</p>
-<p>The whole conductance under a train of spikes is</p>
-<p>$$G(t) = \sum_iK(t) \delta_{t,t_i}<br>  \label{spikeraw}$$</p>
-<p>where there is a spike at time $t_i$. Equation ([spikeraw]) can be<br>simplified with the spike train $S(t) = \sum_i\delta(t - t_i)$</p>
-<p>$$G(t) = \int{d\tau}K(\tau)S(t - \tau)$$</p>
-<h1 id="Simple-Neural-Network"><a href="#Simple-Neural-Network" class="headerlink" title="Simple Neural Network"></a>Simple Neural Network</h1><p>Consider a network with only two neurons attarched FIG. [twonet]. The<br>working status of each neuron is solely stated by its firing rate. So we<br>need to findout the firing-rate relation between neurons. For the single<br>neuron, the only source of external current is from its pre-neuron, i.e.<br>$v = F[I_{syn}]$ from equation ([fireateeq]). Yet $I_{syn}$ followed by<br>equation ([isyn]) is still too complex to be pratical. Hence we further<br>throw away the votage term, and treat $G_{syn}(t)$ as votage<br>independent,</p>
-<p>$$I_{syn} = \int{d\tau}K(\tau)S(t - \tau)$$</p>
-<p>we could extract a factor $w$ so that the rest of<br>$U(\tau) = K(\tau) / w$ can be normalized,</p>
-<p>$$\int{d\tau}U(\tau) = 1$$</p>
-<p>The convolution of a narrow (correnspond to short time of non-zero<br>$K(\tau)$) window $U(\tau)$ with spike train $S(\tau)$ is exactly the<br>firing rate of the presynapse $u$. Overall, we have</p>
-<p>$$v = F[w u].$$</p>
-<p>This equation reveals the simple relation of the network. Larger $w$<br>means the two neurons are more strongly connect, only a slow firing rate<br>of the pre-neuron is enough for triggering the post-neuron. This<br>biologically could mean there are more channels in the post-synapse.<br>Different presynapse will attarch to different sites of the postsynapse.<br>Furthermore, the post-neual layer can also attarch to each other as<br>shown in FIG. . The overall effect is the summation of all their<br>current.</p>
-<p>$$\boldsymbol{v} = F[W\boldsymbol{u} + M \boldsymbol{v}],$$</p>
-<p>where $W, M$ are matrices, arrays are written as bold letters. This<br>model is called rate model, which is the fundation of the lots of deep<br>learning architechture.</p>
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>Membrane of the neuron is a conbination of resistor and capacity. The<br>conductances are different under different membrane and more<br>importantly, different to different types of channels. This attribution<br>allows the neuron to fire, and soon go back to the rest potential. A<br>spike from the pre-neuron will triggered a bit depolyzation of the<br>post-neuron. Once there is enough depolyzation, the post-neuron will<br>also make spikes. Despite the complicated procedure for generating a<br>spike, the exact voltage is unimportant. The real information is stored<br>in the frequency of the spikes, which can be described using a single<br>number – firing rate. By carefully simplify the synapse conductance, one<br>could obtain a relation between the firing rate of neurons, thus have a<br>neuron network. This neuron network also lies in the basis current deep<br>network algorithms.</p>
-<p><img src="test.png" alt="results of problem2\_1"></p>
-<p><span>100</span> <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">MIT OpenCourseWare: Introduction to Neural<br>Computation</a></p>
+<p>This effect is often introduced by Na-selective channels. Typical value of $V_{res}$ is $-65 mV$. There are some choices for $V_{th}$, but values like $-30 mV$ is sufficient to fit a good result. When this statement is triggered, we say the neuron fired, or it made a spike. This single-cell model also be named Integrate and Firing Model. This model contains one resistor (leakage channel), one conductance (membrane), one external current source ($I_e$), and voltage source (FIG. 3). There are lots more sophisticated models, such as HH model, which replace the statement with more realistic channels as additional terms in equation (\ref{ifmodel}).</p>
+<img src="ifmodel.jpg" alt="FIG. 3: The equvilent architechture of a single cell. The spike generator is the above statement, which is biologically some other ion channels (mainly K-gated channel and Na-gated channel) (Ref [3])" width="400"/>
+
+<p>Equation (\ref{ifmodel}) can be collected with a more compact form<br>\begin{equation}<br>\tau \frac{dV}{dt} = -V + V_{\infty},<br>  \label{ifmodelS}<br>  \end{equation} where $\tau = c / G_L$ and $V_{\infty} = (V_L - I_e) / G_L$. If $G_L$ here is a constant, solution of equation [ifmodelS] is<br>\begin{equation}<br>V = (V_L - V_{\infty}) e^{-t/\tau} + V_{\infty}.<br>\end{equation} The firing pattern is shown in FIG. 4</p>
+<img src="firepattern.jpg" alt="FIG. 4: Firing pattern of a single neuron under the injection of positive ions. (Ref [3])" width="350"/>
+
+<p>Information is stored in the firing rate of neurons instead of the exact value of voltage. Firing rate is defined as the number of spikes in a unit time. The time spacing between two spikes can be calculated from equation (\ref{ifmodelS}) by calculate the time that $V$ grows from $V_{res}$ to $V_{th}$. The inverse of time spacing is firing rate, as shown in FIG. 5. In all, we could conclude the relation with<br>\begin{equation}<br>v = F[I_e]<br>\label{fireateeq}<br>\end{equation} where $v$ is the firing rate, and $F$ is some function has the shape in FIG. 5</p>
+<img src="frate.jpg" alt="FIG. 5: Firing rate of the Integrate and Firing Model as a function of current. If current is large, the firing rate is approximately a linear function (Ref [3])" width="350"/>
+
+
+<h1 id="Synapse"><a href="#Synapse" class="headerlink" title="Synapse"></a>Synapse</h1><p>Before moving to neural network, we need to understand how two neurons connect each other by synapse. FIG. [syn] shows the biological structure of the synapse. When the pre-neuron is fired, the depolyzation will open the Ca-channel, induces an inward flow of Ca$^{2+}$. This Ca$^{2+}$ will release the transmitters in the presynapse. Transmitter in the synapse cleft then attach to particular receptors in the post-synapse, open ion-channel to allow Na$^+$ flow into the post-synapse. This final lead to the depolarization of the post-neuron.</p>
+<img src="synapse.jpg" alt="FIG. 6: Biological structure of the synapse (Ref [4])" width="450"/>
+
+<p>The current flow into the post-neuron can be described by<br>\begin{equation}<br>I_{syn} = - G_{syn}(t) (V - V_{syn}),<br>  \label{isyn}<br>\end{equation} where $V_{syn}$ is about $0$ mV, which is the reversal potential of the post-synapse. Conductance $G_{syn}(t)$ behaviors like a exponential decaying function. If there’s no transmitters in the synapse cleft, ion channels in the post-synapse are closed, $G_{syn}(t) = 0$ mV. A spike of the presynapse will suddenly release a large amount of transmitters, therefore largely increase $G_{syn}(t)$. Then the transmitters will graduatly either diffuse away or be decomposed by glials, which lead to the slow decay of the conductance. The conductance induced by single spike is often approximated by the exponential function<br>\begin{equation}<br>K(t) = G_{max} e^{-t / \tau}.<br>\end{equation} The whole conductance under a train of spikes is<br>\begin{equation}<br>G(t) = \sum_iK(t) \delta_{t,t_i}<br>\label{spikeraw}<br>\end{equation} where there is a spike at time $t_i$. Equation (\ref{spikeraw}) can be simplified with the spike train $S(t) = \sum_i\delta(t - t_i)$<br>\begin{equation}<br>G(t) = \int{d\tau}K(\tau)S(t - \tau)<br>\end{equation}</p>
+<h1 id="Simple-Neural-Network"><a href="#Simple-Neural-Network" class="headerlink" title="Simple Neural Network"></a>Simple Neural Network</h1><p>Consider a network with only two neurons attached. The working status of each neuron is solely stated by its firing rate. So we need to findout the firing-rate relation between neurons. For the single neuron, the only source of external current is from its pre-neuron, i.e. $v = F[I_{syn}]$ from equation (\ref{fireateeq}). Yet $I_{syn}$ followed by equation (\ref{isyn}) is still too complex to be pratical. Hence we further throw away the voltage term, and treat $G_{syn}(t)$ as voltage-independent,<br>\begin{equation}<br>I_{syn} = \int{d\tau}K(\tau)S(t - \tau).<br>\end{equation} we could extract a factor $w$ so that the rest of $U(\tau) = K(\tau) / w$ can be normalized,<br>\begin{equation}<br>\int{d\tau}U(\tau) = 1<br>\end{equation} The convolution of a narrow (correnspond to short time of non-zero $K(\tau)$) window $U(\tau)$ with spike train $S(\tau)$ is exactly the firing rate of the presynapse $u$. Overall, we have<br>\begin{equation}<br>v = F[w u].<br>\end{equation}</p>
+<p>This equation reveals the simple relation of the network. Larger $w$ means the two neurons are more strongly connect, only a slow firing rate of the pre-neuron is enough for triggering the post-neuron. This biologically could mean there are more channels in the post-synapse. Different presynapse will attarch to different sites of the postsynapse. Furthermore, the post-neual layer can also attarch to each other as shown in FIG. 7. The overall effect is the summation of all their current.<br>\begin{equation}<br>\boldsymbol{v} = F[W\boldsymbol{u} + M \boldsymbol{v}],<br>\end{equation} where $W, M$ are matrices, arrays are written as bold letters. This model is called rate model, which is the fundation of the lots of deep learning architechture.</p>
+<img src="2layer.jpg" alt="FIG. 7: A two layer network. Each neuron is represented by a single number -- firing rate. Therefore a vector is a layer of neurons. Each line is a weight.  (Ref [5])" width="300"/>
+
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>The membrane of the neuron is a combination of resistor and capacity. Different conductance of different ion channels allow the neuron to fire, and soon go back to the resting potential. A spike from the pre-neuron will trigger a bit depolarization of the post-neuron. Once the potential is high enough, the post-neuron will also make spikes. Despite the complicated procedure for generating a spike, the exact voltage is unimportant. The real information is stored in the frequency of the spikes, which can be described using a single number – firing rate. By carefully simplifing the synapse, one could obtain the relation between the firing rates of different neurons, thus have an equation for the neuron network. This neuron network lies in the basis current deep network algorithms.</p>
+<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h1><p>[1] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cell_membrane">Wiki: cellular membrane</a><br>[2] Chapter 3 of <a target="_blank" rel="noopener" href="https://neurophysics.ucsd.edu/courses/physics_171/Neuroscience%20Exploring%20the%20Brain%20-%20Bear,%20Mark%20F.%20[SRG].pdf">Neuroscience: Exploring the Brain</a><br>[3] Lecture 3 of <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">MIT OpenCourseWare: Introduction to Neural Computation</a><br>[4] Chapter 5 of <a target="_blank" rel="noopener" href="https://neurophysics.ucsd.edu/courses/physics_171/Neuroscience%20Exploring%20the%20Brain%20-%20Bear,%20Mark%20F.%20[SRG].pdf">Neuroscience: Exploring the Brain</a><br>[5] Lecture 18 of <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">MIT OpenCourseWare: Introduction to Neural Computation</a></p>
 
         </div>
         <footer class="article-footer">
@@ -253,7 +242,7 @@
 
 
 
-    <a data-url="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/" data-id="ckgahs5yb000142671kao98fk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/" data-id="ckgauicvr0001p367hn8n1n6h" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -324,17 +313,15 @@
             "name": "AgeYY"
         },
         "headline": "Modeling of Simple Neural Network",
-        "image": "https://ageyy.github.io/neuroblog2020/09/09/biophysics/test.png",
+        "image": "https://ageyy.github.io/neuroblog/neuroblog/2020/09/09/biophysics/ifmodel.jpg",
         "keywords": "",
         "genre": "Review",
         "datePublished": "2020-09-09",
         "dateCreated": "2020-09-09",
         "dateModified": "2020-10-15",
         "url": "https://ageyy.github.io/neuroblog/2020/09/09/biophysics/",
-        "description": "
-
-IntroductionResearches study our neural system in different levels: from conponentsof a single cell, such as membrane, to the connection of two cells(synapsis), and further to the complex network of",
-        "wordCount": 1242
+        "description": "Mathematical modeling from sub-cell components of a neuron to simple neural network. As part of course Introduction to Neural Computation",
+        "wordCount": 1650
     }
 </script>
 
@@ -390,7 +377,7 @@ IntroductionResearches study our neural system in different levels: from conpone
     <h3 class="widget-title">Catalog</h3>
     <div class="widget">
         <div id="toc" class="toc-article">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Membrane"><span class="toc-number">2.</span> <span class="toc-text">Membrane</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Single-Cell"><span class="toc-number">3.</span> <span class="toc-text">Single Cell</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Synapse"><span class="toc-number">4.</span> <span class="toc-text">Synapse</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Simple-Neural-Network"><span class="toc-number">5.</span> <span class="toc-text">Simple Neural Network</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">6.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Membrane"><span class="toc-number">2.</span> <span class="toc-text">Membrane</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Single-Cell"><span class="toc-number">3.</span> <span class="toc-text">Single Cell</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Synapse"><span class="toc-number">4.</span> <span class="toc-text">Synapse</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Simple-Neural-Network"><span class="toc-number">5.</span> <span class="toc-text">Simple Neural Network</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">6.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ref"><span class="toc-number">7.</span> <span class="toc-text">Ref</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -409,7 +396,7 @@ IntroductionResearches study our neural system in different levels: from conpone
                             <a href="/neuroblog/2020/09/09/biophysics/" class="thumbnail">
     
     
-        <span style="background-image:url(2020/09/09/biophysics/test.png)" alt="Modeling of Simple Neural Network" class="thumbnail-image"></span>
+        <span style="background-image:url(/neuroblog/2020/09/09/biophysics/ifmodel.jpg)" alt="Modeling of Simple Neural Network" class="thumbnail-image"></span>
     
     
 </a>
@@ -530,6 +517,16 @@ IntroductionResearches study our neural system in different levels: from conpone
 <script src="/neuroblog/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
 
     
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+         MathJax.Hub.Config({
+             TeX: { equationNumbers: { autoNumber: "AMS" } }
+         });
+        </script>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML.js"></script>
+
     
 
     
