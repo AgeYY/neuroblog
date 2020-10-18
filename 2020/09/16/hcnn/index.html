@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Understanding Sensory Cortex via Hierachical Convolutional Neural Networks. | Neuroblog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Visual System,HCNN,Machine Learning" />
+    
+    <meta name="description" content="The skeleton of this short review is mainly based on Using goal-driven deep learning models to understanding sensory cortex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding Sensory Cortex via Hierachical Convolutional Neural Networks.">
+<meta property="og:url" content="https://ageyy.github.io/neuroblog/2020/09/16/hcnn/index.html">
+<meta property="og:site_name" content="Neuroblog">
+<meta property="og:description" content="The skeleton of this short review is mainly based on Using goal-driven deep learning models to understanding sensory cortex">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/ifmodel.jpg">
+<meta property="article:published_time" content="2020-09-16T13:49:48.000Z">
+<meta property="article:modified_time" content="2020-10-18T17:47:19.800Z">
+<meta property="article:author" content="AgeYY">
+<meta property="article:tag" content="Visual System">
+<meta property="article:tag" content="HCNN">
+<meta property="article:tag" content="Machine Learning">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/ifmodel.jpg">
+    
+
+    
+
+    
+        <link rel="icon" href="/neuroblog/images/brain-logo-24.png" />
+    
+
+    
+<link rel="stylesheet" href="/neuroblog/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/neuroblog/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/neuroblog/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/neuroblog/css/style.css">
+
+
+    
+<script src="/neuroblog/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/neuroblog/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/neuroblog/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/neuroblog/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/neuroblog/">Home</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/neuroblog/categories/Review/">Review</a></li></ul>
+                                
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/neuroblog/',
+        CONTENT_URL: '/neuroblog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/neuroblog/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/neuroblog/categories/Review/">Review</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-hcnn" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Understanding Sensory Cortex via Hierachical Convolutional Neural Networks.
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/neuroblog/2020/09/16/hcnn/" class="article-date">
+       <time datetime="2020-09-16T13:49:48.000Z" itemprop="datePublished">2020-09-16</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/neuroblog/2020/09/16/hcnn/" class="article-date">
+     <time datetime="2020-10-18T17:47:19.800Z" itemprop="dateModified">2020-10-19</time>
+  </a>
+</div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/neuroblog/tags/HCNN/" rel="tag">HCNN</a>, <a class="tag-link-link" href="/neuroblog/tags/Machine-Learning/" rel="tag">Machine Learning</a>, <a class="tag-link-link" href="/neuroblog/tags/Visual-System/" rel="tag">Visual System</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <p>The skeleton of this short review is mainly based on <a target="_blank" rel="noopener" href="https://doi.org/10.1038/nn.4244">Using goal-driven deep learning models to understanding sensory cortex</a></p>
+<a id="more"></a>
+
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>One ultimate goal of the Neuroscience is to predict the reponse of even a single neuron, given a particular stimulus (i.e. how the neuron encode the information). In terms of this goal, visual cortex is probably the most well-understood cortex. Therefore this short review will start from brief biological introduction to the central visual pathway. Then move to how the traditional methods taken efforts in making predition of the response. However, these traditional method failed to predict the response of neurons in higher order of cortex region, such as in V4 or inferior temporal (IT) cortex. Therefore, in section 3, we introduce a generative model: Hierachical Convolutional Neural Networks (HCNN), equip it with goal-driven philosiphy, to obtain pretty good predition even with higher order of cortex region. The final section includes some potentials and limitations of this HCNN $+$ goal-driven method.</p>
+<h1 id="Central-Visual-Pathway"><a href="#Central-Visual-Pathway" class="headerlink" title="Central Visual Pathway"></a>Central Visual Pathway</h1><p>Central visual pathway means how the information of the images (represented by photons) is converted into the electric signal, and be transmitted in the cortex.</p>
+<p>The photons firstly hit the retina in our eyes, change the conductance of the channels in our photo-receptors, thus change strength the electuric signals. This signals is transmitted by ganglion cells along the optic nerve to reach the Lateral geniculate nucleus (LGN) in the thalamus (FIG. 1). Optic radiation radiate the signals in LGN to the V1 cortex in the most posterior of the occipital lobe. Now there are basicaly two pathway for the signal to travel. (FIG.) <a target="_blank" rel="noopener" href="https://www.amazon.com/Neuroscience-Dale-Purves/dp/0878936467">[S. Williams &amp; L. White, 2013]</a></p>
+<ol>
+<li>Dorsal pathway: V1, V2, V3, V3A and MT etc. This pathway is thought of responsible for the “where” problem: what is the positional relation of the objects in the image, in which direction does the object move…</li>
+<li>Ventral pathway: V1, V2, V4 and IT etc. This pathway is thought of responsible for the “what” problem, such as object recogization.</li>
+</ol>
+<img src="cvisual1.jpg" alt="FIG. 1 Part of the central visual pathway. Electric signal from retina travel to the thalamus. Some threads terminate at the thalamus, while the signals to LGN will be further radiated to the occipital lobe. [1]" width="300"/>
+<img src="cvisual2.jpg" alt="FIG.2 Two-stream hypothesis. Ventral pathway (V1 - V2 - V4) is for object recognization. Dorsal pathway (V1 - V2 - MT) is spatial vision [1]" width="300"/>
+
+<p>One goal of today’s neuroscience is to understanding how the neurons in the above regions response to different stimulus (i.e. images). More formally, the stimulus is a matrix $S$, with each entry represents the photon density, the questions finding the firing rate of the neurons in a very small regions (so they can be thought of react to the stimulus homogenusly) $r$ as a function of matrix $S$.</p>
+<h1 id="Traditional-Method"><a href="#Traditional-Method" class="headerlink" title="Traditional Method"></a>Traditional Method</h1><h2 id="Gabor-wavelet-filter"><a href="#Gabor-wavelet-filter" class="headerlink" title="Gabor wavelet filter"></a>Gabor wavelet filter</h2><p>The most straight forward model of the above problem is receptive field<br>\begin{equation}<br>r = \sum_{i,j} R_{i,j}S_{i,j}<br>\end{equation} where $R$ is the receptive field. It can be either a matrix (descret positions) or function R(x, y) (continum positions). According to some observation, JP Jones etal in year 1987 propsed that R is actually a gabor wavelet <a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/3437332/">[J Jones &amp; L Palmer]</a><br>\begin{equation}<br>R(x, y) = K \text{exp}(-1/2(x_g^2 / a^2 + y_g^2 / b^2)) \text{cos}(-2\pi(U_0x + V_0y) - P),<br>\label{gaborwave}<br>\end{equation} where $x_g$ and $y_g$ are the rotation transfomation of the original coordinate space<br>\begin{equation}<br>x_g = x \text{cos}(\theta) - y \text{sin}(\theta);<br>y_g = x \text{sin}(\theta) + y \text{cos}(\theta)<br>\end{equation} The rest of parameters in equation (\ref{gaborwave}) are constant.</p>
+<p>The fitting result shows pretty good result of the neurons in the V1 cortex (FIG.3) However, this method only tells what the receptive field should look like, but didn’t clearly expain why they should be gabor wavelet.</p>
+<img src="gabor.jpg" alt="FIG.3 Fitting result of the gabor function. The gabor wavelet can be think as a gaussian function, but modulated by a triangular function. The error is relatively smaller than the signals. [2]" width="400"/>
+
+<h2 id="Learning-the-Neural-Response-via-Efficient-Coding"><a href="#Learning-the-Neural-Response-via-Efficient-Coding" class="headerlink" title="Learning the Neural Response via Efficient Coding"></a>Learning the Neural Response via Efficient Coding</h2><p>On the contrary, efficient coding could give a clearer biological meaning. An interpretation of the function of neurons is that, different neurons are developed to capture different aspects of the images. For example, neuron 1 will only detect the image information in the horizonal direction, neuron 2 will only look at into the infomation in another direction. So neurons could actually tears the original image into some simple parts which is easier for further analysing. Actually this idea could be achieved by gabor function: the response via different gabor wavelet filters can indeed capture different aspects of the original image. Yet efficient coding is a more powerful method because it could learn the response automatically. </p>
+<p>With the above idea, the image can be represented by a set of basis <a target="_blank" rel="noopener" href="https://doi.org/10.1038/381607a0">[BOlshausen &amp; D. Field, 1996]</a><br>\begin{equation}<br>S(x, y) = \sum_{i} a_i \phi_i(x, y).<br>\end{equation} where index $i$ represents neuron $i$. Our brain must evolved at some point between the ability (how well we can understand the image) and economy (it should take as fewer neurons as possible). This two aspects hint us to write down the following loss function<br>\begin{equation}<br>L = - [\text{perserve information}] - \lambda [\text{sparseness of $a_i$}]<br>\label{lossinfo}<br>\end{equation} where $\lambda$ controls the importance of economy. Perserve information could be the L2 error<br>\begin{equation}<br>[\text{perserve information}] = - [S(x, y) - \sum_{i} a_i \phi_i(x, y)]^2<br>\end{equation} and<br>\begin{equation}<br>[\text{sparseness of $a_i$}] = - \sum_i S(\frac{a_i}{\sigma})<br>\end{equation}</p>
+<p>Equation (\ref{lossinfo}) can be minimized though gradient descent. We could use nature scence as the traning set, and do the unsupervised learning so could obtain the basis (FIG. 4). It correctly shows how different neurons capture different aspects of the original image.</p>
+<img src="basis.jpg" alt="FIG.4 Basis of the image. Each figure is one base can be interpreted as the response of the neuron. They contains different information of the original figure. [3]" width="400"/>
+
+<h2 id="Fitting-Networks-to-Neural-Data"><a href="#Fitting-Networks-to-Neural-Data" class="headerlink" title="Fitting Networks to Neural Data"></a>Fitting Networks to Neural Data</h2><p>This method is even more straightforward. We could obtain the stimulus and the response of the neurons from the experiment, therefore we could link this two quantities directlly though some statistics method. This method apears to be succesful in visual area V1, auditory area A1 etc. <a target="_blank" rel="noopener" href="https://doi.org/10.1146/annurev.neuro.23.1.613">[R deCharms and A Zador, 2000]</a></p>
+<h2 id="Difficulties-with-Deeper-Networks"><a href="#Difficulties-with-Deeper-Networks" class="headerlink" title="Difficulties with Deeper Networks"></a>Difficulties with Deeper Networks</h2><p>The above models are successful in the primary cortex (V1). However, the higher order region like V4 apears to be too complex so that either asumptions in the above method become invalid nor too difficult to fit due to the too many parameters. Therefore new method is needed.</p>
+<h1 id="HCNN-and-Goal-driven-Method"><a href="#HCNN-and-Goal-driven-Method" class="headerlink" title="HCNN and Goal-driven Method"></a>HCNN and Goal-driven Method</h1><p>Although we don’t exactly know how neurons in the cortex wiring together, we could roughly divide cortex into layers (under the meaning of connections, not anatomy relation). For example, V1, V2 are different layers. There are infomation flows between layers to layers. One good anology of the cotex is Hierachical Convolutional Neural Networks (FIG. 5). Each entry in one layers is a number, corresponds to the firing rate of one small region of neurons. Layers are connected though linear-non-linear (LN) operation: filter, threshold, pool and normalize. Each sub-operation can roughly corresponds to some features of the cortex. For example, threshold is the activation function of one neuron under a stimulus.</p>
+<img src="hcnn.jpg" alt="FIG.5 HCNN is a rough analogy of our visual cortex which captures some important features of the actrual neural network. Details see [4]" width="600"/>
+
+<p>HCNN contains majorly two kinds of parameters: 1. discrete paramters, includ the number of layers, shape of the filters etc. 2. continuous paramters, the weights on the filter and fully connected layers.</p>
+<p>From the traditional method, we know it is difficult to findout the stimulus-response relation. Therefore in goal-driven method, we temperally don’t consider this problem. Instead, we consider how to use HCNN to reproduce the cognitive ability, for example, in ventral visual patheway, how to recognize objects. The parameters above are configured by optimizing the performance of the cognitive abilitt. Surperising, if we detect the response of the neurons in hidden layer, it will give good prediction of how the real neuron response (FIG. 5).</p>
+<img src="itpred.jpg" alt="FIG.6 The predictivity increase as the incresing of the categorization performance of HCNN. Dots are different configuration of parameters of HCNN. Blue dots are random configuration of the parameters. Black dots are the earler published model. Red dots shows the development of the HCNN during the optimational procedure. Details see [4] " width="350"/>
+
+<p>The most powerful aspect of HCNN I think is that, it can unify different sensory cortex into one architechture. HCNN is not only applicable to visual cortex, but with some modification, also applicable to auditory cortex. This implies that our brain was actually a giant, simple HCNN. The evolution force us to “learn” the exact parameters to achieve different congnative ability. Actually, if part of funtion in our brain is injured, we could possible use the other part of the brain to perform the same task, which means the cortex specialied in one function can smoothly transformed into another specialization. <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4889613/">[S. Carron ect.]</a></p>
+<h1 id="Disscusion"><a href="#Disscusion" class="headerlink" title="Disscusion"></a>Disscusion</h1><p>Most of the potential and limitations are discussed in <a target="_blank" rel="noopener" href="https://doi.org/10.1038/nn.4244">[D Yamins ectal., 2018]</a>. Here I would only add some points.</p>
+<p>The most limitation of the HCNN I suppose is the architechture. Convolution apears only for some invariant properties in the image. It is likely that “filter” neurons developed same parameters, so that we could use single filter to replace them. However, there’s no reason that the other sensory cotex have some similar symmetry. Further, recurrent seems exist everywhere in the cortex, yet this important feature is not inclued in the HCNN model. Therefore better understanding on how to coorperate RNN in the brain to the machine learning algorithm is needed. <a target="_blank" rel="noopener" href="http://arxiv.org/abs/2006.01001">[G Yang &amp; X Wang, 2020]</a></p>
+<p>Further, even we could reproduce the response of neuron via HCNN model, we still don’t know <em>why</em> they response like that. HCNN model, unfortrunately lack of good interpretability. This is related to the long existing <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Reverse_engineering#:~:text=Reverse%20engineering%2C%20also%20called%20backwards,extract%20knowledge%20from%20the%20object.">reverse engineering problem</a>.</p>
+<h1 id="Image-Ref"><a href="#Image-Ref" class="headerlink" title="Image Ref"></a>Image Ref</h1><p>[1] <a target="_blank" rel="noopener" href="https://www.amazon.com/Neuroscience-Dale-Purves/dp/0878936467">S. Williams &amp; L. White, 2013</a><br>[2] <a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/3437332/">J Jones &amp; L Palmer</a><br>[3] <a target="_blank" rel="noopener" href="https://doi.org/10.1038/381607a0">BOlshausen &amp; D. Field, 1996</a><br>[4] <a target="_blank" rel="noopener" href="https://doi.org/10.1038/381607a0">BOlshausen &amp; D. Field, 1996</a></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://ageyy.github.io/neuroblog/2020/09/16/hcnn/" data-id="ckgfel2gz0002bi671szo6b6p" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "AgeYY"
+        },
+        "headline": "Understanding Sensory Cortex via Hierachical Convolutional Neural Networks.",
+        "image": "https://ageyy.github.io/neuroblog/neuroblog/2020/09/09/biophysics/ifmodel.jpg",
+        "keywords": "Visual System HCNN Machine Learning",
+        "genre": "Review",
+        "datePublished": "2020-09-16",
+        "dateCreated": "2020-09-16",
+        "dateModified": "2020-10-19",
+        "url": "https://ageyy.github.io/neuroblog/2020/09/16/hcnn/",
+        "description": "The skeleton of this short review is mainly based on Using goal-driven deep learning models to understanding sensory cortex",
+        "wordCount": 1698
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/AgeYY" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="gitlab" href="https://gitlab.com/AgeYY" target="_blank" rel="noopener">
+                        <i class="icon fa fa-gitlab"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/neuroblog/2020/09/09/biophysics/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Modeling of Simple Neural Network</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+<div class="widget-wrap widget-list">
+    <h3 class="widget-title">Catalog</h3>
+    <div class="widget">
+        <div id="toc" class="toc-article">
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Central-Visual-Pathway"><span class="toc-number">2.</span> <span class="toc-text">Central Visual Pathway</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Traditional-Method"><span class="toc-number">3.</span> <span class="toc-text">Traditional Method</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gabor-wavelet-filter"><span class="toc-number">3.1.</span> <span class="toc-text">Gabor wavelet filter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Learning-the-Neural-Response-via-Efficient-Coding"><span class="toc-number">3.2.</span> <span class="toc-text">Learning the Neural Response via Efficient Coding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fitting-Networks-to-Neural-Data"><span class="toc-number">3.3.</span> <span class="toc-text">Fitting Networks to Neural Data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Difficulties-with-Deeper-Networks"><span class="toc-number">3.4.</span> <span class="toc-text">Difficulties with Deeper Networks</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#HCNN-and-Goal-driven-Method"><span class="toc-number">4.</span> <span class="toc-text">HCNN and Goal-driven Method</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Disscusion"><span class="toc-number">5.</span> <span class="toc-text">Disscusion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Image-Ref"><span class="toc-number">6.</span> <span class="toc-text">Image Ref</span></a></li></ol>
+        </div>
+    </div>
+</div>
+
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/neuroblog/2020/09/16/hcnn/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/neuroblog/2020/09/09/biophysics/ifmodel.jpg)" alt="Understanding Sensory Cortex via Hierachical Convolutional Neural Networks." class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/neuroblog/categories/Review/">Review</a></p>
+                            <p class="item-title"><a href="/neuroblog/2020/09/16/hcnn/" class="title">Understanding Sensory Cortex via Hierachical Convolutional Neural Networks.</a></p>
+                            <p class="item-date"><time datetime="2020-09-16T13:49:48.000Z" itemprop="datePublished">2020-09-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/neuroblog/2020/09/09/biophysics/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/neuroblog/2020/09/09/biophysics/ifmodel.jpg)" alt="Modeling of Simple Neural Network" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/neuroblog/categories/Review/">Review</a></p>
+                            <p class="item-title"><a href="/neuroblog/2020/09/09/biophysics/" class="title">Modeling of Simple Neural Network</a></p>
+                            <p class="item-date"><time datetime="2020-09-09T09:15:48.000Z" itemprop="datePublished">2020-09-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/neuroblog/archives/2020/09/">September 2020</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/neuroblog/tags/HCNN/" rel="tag">HCNN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/neuroblog/tags/Machine-Learning/" rel="tag">Machine Learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/neuroblog/tags/Visual-System/" rel="tag">Visual System</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/neuroblog/tags/HCNN/" style="font-size: 10px;">HCNN</a> <a href="/neuroblog/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/neuroblog/tags/Visual-System/" style="font-size: 10px;">Visual System</a>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/neuroblog/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 AgeYY</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'neuroblog';
+    
+    
+    var disqus_url = 'https://ageyy.github.io/neuroblog/2020/09/16/hcnn/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/neuroblog/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/neuroblog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/neuroblog/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/neuroblog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/neuroblog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/neuroblog/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/neuroblog/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/neuroblog/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/neuroblog/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/neuroblog/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+         MathJax.Hub.Config({
+             TeX: { equationNumbers: { autoNumber: "AMS" } }
+         });
+        </script>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML.js"></script>
+
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/neuroblog/js/main.js"></script>
+
+
+</body>
+</html>
