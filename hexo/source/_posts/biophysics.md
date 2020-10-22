@@ -1,7 +1,7 @@
 ---
 title: Modeling of Simple Neural Network
 date: 2020-09-09 17:15:48
-categories: Review
+categories: Ref Reading
 toc: true
 thumbnail: /neuroblog/2020/09/09/biophysics/ifmodel.jpg
 ---
