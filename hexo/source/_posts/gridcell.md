@@ -4,6 +4,10 @@ date: 2020-09-28 12:10:38
 categories: Ref Reading
 toc: true
 thumbnail: /neuroblog/2020/09/28/gridcell/gridpattern.jpg
+tags:
+- Grid Cell
+- Navigation
+- Machine Learning
 ---
 
 An brief overview on my talk, _Theory of Grid cell_. Please refer to my [powerpoint](gridcell.pdf) for figures and more detail.
