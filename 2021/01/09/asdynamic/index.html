@@ -6,25 +6,28 @@
     
 
     
-    <title>Modeling of Simple Neural Network | Neuroblog</title>
+    <title>Autistic Spectrum Disorder From Dynamical Perspective | Neuroblog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="keywords" content="" />
+    <meta name="keywords" content="RNN,Dynamical System,Autistic Spectrum Disorder" />
     
-    <meta name="description" content="Mathematical modeling from sub-cell components of a neuron to simple neural network. As part of course Introduction to Neural Computation">
+    <meta name="description" content="Finding the causes of autistic spectrum disorder (ASD) from the perspective of dynamical system. Thumbnail adapted from [Shenoy et al. 2013]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Modeling of Simple Neural Network">
-<meta property="og:url" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/index.html">
+<meta property="og:title" content="Autistic Spectrum Disorder From Dynamical Perspective">
+<meta property="og:url" content="https://ageyy.github.io/neuroblog/2021/01/09/asdynamic/index.html">
 <meta property="og:site_name" content="Neuroblog">
-<meta property="og:description" content="Mathematical modeling from sub-cell components of a neuron to simple neural network. As part of course Introduction to Neural Computation">
+<meta property="og:description" content="Finding the causes of autistic spectrum disorder (ASD) from the perspective of dynamical system. Thumbnail adapted from [Shenoy et al. 2013]">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/ifmodel.jpg">
-<meta property="article:published_time" content="2020-09-09T09:15:48.000Z">
-<meta property="article:modified_time" content="2020-10-18T17:50:48.745Z">
+<meta property="og:image" content="https://ageyy.github.io/neuroblog/2021/01/09/asdynamic/asdynamic.jpg">
+<meta property="article:published_time" content="2021-01-09T07:08:18.996Z">
+<meta property="article:modified_time" content="2021-01-09T07:35:12.008Z">
 <meta property="article:author" content="AgeYY">
+<meta property="article:tag" content="RNN">
+<meta property="article:tag" content="Dynamical System">
+<meta property="article:tag" content="Autistic Spectrum Disorder">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/ifmodel.jpg">
+<meta name="twitter:image" content="https://ageyy.github.io/neuroblog/2021/01/09/asdynamic/asdynamic.jpg">
     
 
     
@@ -147,19 +150,19 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/neuroblog/categories/Ref-Reading/">Ref Reading</a>
+    <a class="page-title-link" href="/neuroblog/categories/Ideas/">Ideas</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            <article id="post-biophysics" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-asdynamic" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        Modeling of Simple Neural Network
+        Autistic Spectrum Disorder From Dynamical Perspective
         </h1>
     
 
@@ -170,16 +173,16 @@
                 
   <div class="article-date">
     <i class="fa fa-calendar"></i>
-    <a href="/neuroblog/2020/09/09/biophysics/" class="article-date">
-       <time datetime="2020-09-09T09:15:48.000Z" itemprop="datePublished">2020-09-09</time>
+    <a href="/neuroblog/2021/01/09/asdynamic/" class="article-date">
+       <time datetime="2021-01-09T07:08:18.996Z" itemprop="datePublished">2021-01-09</time>
     </a>
   </div>
 
 
 <div class="article-date">
   <i class="fa fa-calendar-plus-o"></i>
-  <a href="/neuroblog/2020/09/09/biophysics/" class="article-date">
-     <time datetime="2020-10-18T17:50:48.745Z" itemprop="dateModified">2020-10-19</time>
+  <a href="/neuroblog/2021/01/09/asdynamic/" class="article-date">
+     <time datetime="2021-01-09T07:35:12.008Z" itemprop="dateModified">2021-01-09</time>
   </a>
 </div>
 
@@ -187,6 +190,11 @@
                 
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/neuroblog/tags/Autistic-Spectrum-Disorder/" rel="tag">Autistic Spectrum Disorder</a>, <a class="tag-link-link" href="/neuroblog/tags/Dynamical-System/" rel="tag">Dynamical System</a>, <a class="tag-link-link" href="/neuroblog/tags/RNN/" rel="tag">RNN</a>
+    </div>
+
                 
 
                 
@@ -201,40 +209,30 @@
 
             
 
-            <p>Mathematical modeling from sub-cell components of a neuron to simple neural network. As part of course <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">Introduction to Neural Computation</a></p>
+            <p>Finding the causes of autistic spectrum disorder (ASD) from the perspective of dynamical system. Thumbnail adapted from <a target="_blank" rel="noopener" href="https://doi.org/10.1146/annurev-neuro-062111-150509">[Shenoy et al. 2013]</a></p>
 <a id="more"></a>
 
-<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>Researchers study our neural system in different levels: from components of a single cell, such as membrane, to the connection of two cells (synapsis), and further to the complex network of the whole brain. This summary trying to find a straight pathway of the modeling from sub-cellcular level to simple neural network. Please refer <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">Introduction to Neural Computation</a> for more detail.</p>
-<h1 id="Membrane"><a href="#Membrane" class="headerlink" title="Membrane"></a>Membrane</h1><p>The membrane has roughly two parts that are vital in the neural activity: phospholipid bilayer and channels (FIG. 1). Phospholipid bilayer is permeable to water, oil etc., yet impereable for ions. This attribution is similar to semi-permeable membrane. Ions carry charges, if the charge densities of the two sides of phospholipid bilayer (intra cellular space and extra-cellular space) are different, there will be a voltage difference across cell membrane. In all, because of the existence of phospholipid bilayer, the cell has a function similar to capacitor<br>\begin{equation}<br>c V = Q<br>\label{ohm}<br>\end{equation} where $c$ is the capacity per unit area, $Q$ is the charge density differences and $V$ is the voltage accross the cell. The voltage of the extra-cellcular space is set to be zero, therefore $V$ here is also the voltage of intra-cellular space, which is roughly $-70 \text{mV}$ to $ -50 \text{mV}$ as measured by the experiment.</p>
-<img src="membrane.png" alt="FIG. 1: The structure of the cell membrane. Oil soluable moculers can pass though the phospholipid bilayer (blue layer), while ions can only flow into cell by ion channels. (Ref [1])" width="400"/>
-
-<p>There are two types of channels: ion channels and metabolic channel. The effect of metabolic channels are more indirect and complex, which is not the central concern of this summary. Ion channel behaviors as the gate of the membrane. It allows only certain types of ions to pass through the membrane, thus produce inward or outward current flow. For example, Na-gated channel is only permeable to Na$^+$, when the channel is open . One good approximation of the channel is resistor, govern by the Ohm’s law<br>\begin{equation}<br>I = G_i (V - V_i)<br>  \label{olm}<br>\end{equation} where $G_i$ is the conductance which can depend on the votlage and time, and $V_i$ is the equilibrium voltage (constant for a certain type of channel) results from the balance of electric force and diffusion (FIG. 2). Index $i$ here means $i$th type of ion channel. Positive $I$ means outward current.</p>
-<img src="permea.jpg" alt="FIG. 2: An example of equilibrium voltage. (a) In the initial state, there are more Na and A ions in the right handside, yet the voltage is 0, since the effects of Na and A are cancelled out. (b) However, if there is an Na-gated channel in the membrane, the Na in the right handside will diffuse into the left handside. (c) Finally this system will go back to equilibrium state when the electric force is equal to the force for difussion. In this state, we have a equilibrium volatage (Ref: [2])" width="500"/>
-
-<h1 id="Single-Cell"><a href="#Single-Cell" class="headerlink" title="Single Cell"></a>Single Cell</h1><p>Differentiate on both side of equation (\ref{ohm}) and use equation (\ref{olm}), we have an equation for single cell<br>\begin{equation}<br>c \frac{dV}{dt} = - G_L (V - V_L) - I_e<br>\label{ifmodel}<br>\end{equation} where $I_e$ is the extra-induced current, such as the experimentist inject ions to the cell (negtive $I_e$). Index $L$ is leakage channel, which is a mathematically equivalent channel of a partial function of some types of channel (largely fall into K-selective channel). The rest of effects of channels can be simplified as the following statement:</p>
-<ul>
-<li>If $V &gt; V_{th}$, $V = 50 \text{mV}$, then quickly fall to $V_{res}$.</li>
-</ul>
-<p>This effect is often introduced by Na-selective channels. Typical value of $V_{res}$ is $-65 mV$. There are some choices for $V_{th}$, but values like $-30 mV$ is sufficient to fit a good result. When this statement is triggered, we say the neuron fired, or it made a spike. This single-cell model also be named Integrate and Firing Model. This model contains one resistor (leakage channel), one conductance (membrane), one external current source ($I_e$), and voltage source (FIG. 3). There are lots more sophisticated models, such as HH model, which replace the statement with more realistic channels as additional terms in equation (\ref{ifmodel}).</p>
-<img src="ifmodel.jpg" alt="FIG. 3: The equvilent architechture of a single cell. The spike generator is the above statement, which is biologically some other ion channels (mainly K-gated channel and Na-gated channel) (Ref [3])" width="400"/>
-
-<p>Equation (\ref{ifmodel}) can be collected with a more compact form<br>\begin{equation}<br>\tau \frac{dV}{dt} = -V + V_{\infty},<br>  \label{ifmodelS}<br>  \end{equation} where $\tau = c / G_L$ and $V_{\infty} = (V_L - I_e) / G_L$. If $G_L$ here is a constant, solution of equation [ifmodelS] is<br>\begin{equation}<br>V = (V_L - V_{\infty}) e^{-t/\tau} + V_{\infty}.<br>\end{equation} The firing pattern is shown in FIG. 4</p>
-<img src="firepattern.jpg" alt="FIG. 4: Firing pattern of a single neuron under the injection of positive ions. (Ref [3])" width="350"/>
-
-<p>Information is stored in the firing rate of neurons instead of the exact value of voltage. Firing rate is defined as the number of spikes in a unit time. The time spacing between two spikes can be calculated from equation (\ref{ifmodelS}) by calculate the time that $V$ grows from $V_{res}$ to $V_{th}$. The inverse of time spacing is firing rate, as shown in FIG. 5. In all, we could conclude the relation with<br>\begin{equation}<br>v = F[I_e]<br>\label{fireateeq}<br>\end{equation} where $v$ is the firing rate, and $F$ is some function has the shape in FIG. 5</p>
-<img src="frate.jpg" alt="FIG. 5: Firing rate of the Integrate and Firing Model as a function of current. If current is large, the firing rate is approximately a linear function (Ref [3])" width="350"/>
-
-
-<h1 id="Synapse"><a href="#Synapse" class="headerlink" title="Synapse"></a>Synapse</h1><p>Before moving to neural network, we need to understand how two neurons connect each other by synapse. FIG. [syn] shows the biological structure of the synapse. When the pre-neuron is fired, the depolyzation will open the Ca-channel, induces an inward flow of Ca$^{2+}$. This Ca$^{2+}$ will release the transmitters in the presynapse. Transmitter in the synapse cleft then attach to particular receptors in the post-synapse, open ion-channel to allow Na$^+$ flow into the post-synapse. This final lead to the depolarization of the post-neuron.</p>
-<img src="synapse.jpg" alt="FIG. 6: Biological structure of the synapse (Ref [4])" width="450"/>
-
-<p>The current flow into the post-neuron can be described by<br>\begin{equation}<br>I_{syn} = - G_{syn}(t) (V - V_{syn}),<br>  \label{isyn}<br>\end{equation} where $V_{syn}$ is about $0$ mV, which is the reversal potential of the post-synapse. Conductance $G_{syn}(t)$ behaviors like a exponential decaying function. If there’s no transmitters in the synapse cleft, ion channels in the post-synapse are closed, $G_{syn}(t) = 0$ mV. A spike of the presynapse will suddenly release a large amount of transmitters, therefore largely increase $G_{syn}(t)$. Then the transmitters will graduatly either diffuse away or be decomposed by glials, which lead to the slow decay of the conductance. The conductance induced by single spike is often approximated by the exponential function<br>\begin{equation}<br>K(t) = G_{max} e^{-t / \tau}.<br>\end{equation} The whole conductance under a train of spikes is<br>\begin{equation}<br>G(t) = \sum_iK(t) \delta_{t,t_i}<br>\label{spikeraw}<br>\end{equation} where there is a spike at time $t_i$. Equation (\ref{spikeraw}) can be simplified with the spike train $S(t) = \sum_i\delta(t - t_i)$<br>\begin{equation}<br>G(t) = \int{d\tau}K(\tau)S(t - \tau)<br>\end{equation}</p>
-<h1 id="Simple-Neural-Network"><a href="#Simple-Neural-Network" class="headerlink" title="Simple Neural Network"></a>Simple Neural Network</h1><p>Consider a network with only two neurons attached. The working status of each neuron is solely stated by its firing rate. So we need to findout the firing-rate relation between neurons. For the single neuron, the only source of external current is from its pre-neuron, i.e. $v = F[I_{syn}]$ from equation (\ref{fireateeq}). Yet $I_{syn}$ followed by equation (\ref{isyn}) is still too complex to be pratical. Hence we further throw away the voltage term, and treat $G_{syn}(t)$ as voltage-independent,<br>\begin{equation}<br>I_{syn} = \int{d\tau}K(\tau)S(t - \tau).<br>\end{equation} we could extract a factor $w$ so that the rest of $U(\tau) = K(\tau) / w$ can be normalized,<br>\begin{equation}<br>\int{d\tau}U(\tau) = 1<br>\end{equation} The convolution of a narrow (correnspond to short time of non-zero $K(\tau)$) window $U(\tau)$ with spike train $S(\tau)$ is exactly the firing rate of the presynapse $u$. Overall, we have<br>\begin{equation}<br>v = F[w u].<br>\end{equation}</p>
-<p>This equation reveals the simple relation of the network. Larger $w$ means the two neurons are more strongly connect, only a slow firing rate of the pre-neuron is enough for triggering the post-neuron. This biologically could mean there are more channels in the post-synapse. Different presynapse will attarch to different sites of the postsynapse. Furthermore, the post-neual layer can also attarch to each other as shown in FIG. 7. The overall effect is the summation of all their current.<br>\begin{equation}<br>\boldsymbol{v} = F[W\boldsymbol{u} + M \boldsymbol{v}],<br>\end{equation} where $W, M$ are matrices, arrays are written as bold letters. This model is called rate model, which is the fundation of the lots of deep learning architechture.</p>
-<img src="2layer.jpg" alt="FIG. 7: A two layer network. Each neuron is represented by a single number -- firing rate. Therefore a vector is a layer of neurons. Each line is a weight.  (Ref [5])" width="300"/>
-
-<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>The membrane of the neuron is a combination of resistor and capacity. Different conductance of different ion channels allow the neuron to fire, and soon go back to the resting potential. A spike from the pre-neuron will trigger a bit depolarization of the post-neuron. Once the potential is high enough, the post-neuron will also make spikes. Despite the complicated procedure for generating a spike, the exact voltage is unimportant. The real information is stored in the frequency of the spikes, which can be described using a single number – firing rate. By carefully simplifing the synapse, one could obtain the relation between the firing rates of different neurons, thus have an equation for the neuron network. This neuron network lies in the basis current deep network algorithms.</p>
-<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h1><p>[1] <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Cell_membrane">Wiki: cellular membrane</a><br>[2] Chapter 3 of <a target="_blank" rel="noopener" href="https://neurophysics.ucsd.edu/courses/physics_171/Neuroscience%20Exploring%20the%20Brain%20-%20Bear,%20Mark%20F.%20[SRG].pdf">Neuroscience: Exploring the Brain</a><br>[3] Lecture 3 of <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">MIT OpenCourseWare: Introduction to Neural Computation</a><br>[4] Chapter 5 of <a target="_blank" rel="noopener" href="https://neurophysics.ucsd.edu/courses/physics_171/Neuroscience%20Exploring%20the%20Brain%20-%20Bear,%20Mark%20F.%20[SRG].pdf">Neuroscience: Exploring the Brain</a><br>[5] Lecture 18 of <a target="_blank" rel="noopener" href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-40-introduction-to-neural-computation-spring-2018/">MIT OpenCourseWare: Introduction to Neural Computation</a></p>
+<h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>Continous changing brain activity can be viewed as a trajectory in the high dimensional state space, with each dimension as a neuron. Mental illness is hyperthesis of the mulfunction of the individual’s state space. However, this view seems have not been applyed to the study of autism. Here, we proposed a bit detailed plan which is promising in finding the causes of autism from the dynamical point of view.</p>
+<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>The brain is believed as an interconnected network with billions of neurons as nodes.<br>This giant network is possible to be described by a set of equations. Despite we don’t<br>exactly know the close form of the equation, it has already provided us a new picture – a<br>dynamic picture of viewing the neuron activities. In this picture, each state of the brain<br>network is a point in N-dimensional state space (N is the number of neurons). A<br>dynamical changing of the neuron activity is equivalent to a trajectory in state space.</p>
+<p>This dynamical view helps us understand the brain. A common experimental paradigm<br>used to study the motor cortex is the instructed-delay reaching task. From the dynamical<br>perspective, the preparatory period brings the neural state to an initial state, so that<br>neurons can quickly shift to the movement attractor after the ‘Go’ cue [1]. In decision<br>making, the researcher found the neural states in the state space form a line attractor: a<br>linear arrangement of stable points with endpoints corresponding to converged decisions<br>[2]. Chaisangmongkon et al. [3] trained RNN to perform match-to-category (DMC) tasks.<br>They found that there are stable states connected by robust trajectory tunnels.<br>Misclassification thus can be interpreted as noise pushing the state outside the correct<br>channel.</p>
+<p>Recently researchers also making efforts to extend this dynamical view to the wholebrain scale, especially in the study of mental illness. The central hypothesis is that<br>dramatic alternation of the attractor dynamics will cause mental illness. For instance,<br>failure to integrate information is associated with alteration in line attractor [4].<br>Obsession is caused by overly steep attractor basins. Too low chaoticity will lead to<br>reduced cognitive flexibility. Indeed, based on the profound symptom, the Autism brain<br>should have some unusual features in the state space.</p>
+<h1 id="Research-Plan"><a href="#Research-Plan" class="headerlink" title="Research Plan"></a>Research Plan</h1><p>Here, we aim to uncover the possible abnormal features in the dynamics of Autism by<br>three stages. In the first stage, we plan to infer the underlying dynamics of the autism<br>brain from their fMRI data. The data will be acquired from Autism Brain Imaging Data<br>Exchange (ABIDE), which contains 1, 000 scanning subjects, with around 500 ASD and<br>500 normal people. However, inferring the complete dynamics from such low temporal<br>resolution data (TR = 2 seconds) could be a challenge. Therefore we would like to first<br>try the traditional methods, such as Hidden Marte Calo Model, or Ising Model. These<br>models although contain little information of the state space, they can find out simple<br>features, such as the deepness of the attractor, transitional probability between the<br>attractor, etc. Indeed, it has been shown in [5] that ASD has abnormal states transition.</p>
+<p>In stage 2, we would like to infer more detail with Deep learning, specifically, RNN. Due<br>to the complexity of the brain data, some modification of the RNN is necessary.<br>Fortunately, there are several modified architectures available recently from [6]. These<br>models have been proven robust even when learning the underlying dynamics from the<br>chaotic system, such as the Lorentz system. In the ideal world, each individual’s fMRI<br>data can be fed into one particular RNN, so that as the final outcome of this stage, we<br>have 1, 000 different RNNs as “fake brain”. These machines then are passed to stage 3<br>for further analysis.</p>
+<p>There are lots of existing methods for analyzing RNN from both traditional<br>Neuroscience, and the recent active Machine Learning community. Traditional ones<br>would be finding the attractor, and study the linearized approximation behavior near the<br>attractor. Mature packages (FixPointFinder [7]) have been developed for this kind of<br>study. We would like to go further, employ novel metrics such as Riemann curvature to<br>measure the motion of the states in state space.</p>
+<p>Overall, the research is supposed to develop step-wise by:</p>
+<ol>
+<li>Using traditional models, such as HMM and Ising Model to study the simple<br>dynamical features of the Autism group</li>
+<li>Training the RNN to learn the underlying dynamics of the individual brain from<br>fMRI data</li>
+<li>Analyzing the behavior of an individual’s RNN, obtain some novel dynamic<br>features. These features will be used to compare the ASD group and normal<br>group, and even tell the individual difference within the ASD group.</li>
+</ol>
+<h1 id="Some-Comments"><a href="#Some-Comments" class="headerlink" title="Some Comments"></a>Some Comments</h1><p>This is actually an writing assignment. Honestly, after I finished the writing, I realized this plan is unlikely to work. The biggest challenge is still how RNN inffers the underlying dynamics from such sparse, low temporal-resolution data. Anyway, we could use EEG instead. Another problem is that, the brain dynamics could be far complex, which is unlikely to be learned by RNN. In the worst case, people doing this plan could struggle to design RNN architectures to do the mission of impossible.</p>
+<h1 id="Ref"><a href="#Ref" class="headerlink" title="Ref"></a>Ref</h1><p>[1] Shenoy, K. V., Sahani, M., &amp; Churchland, M. M. (2013). Cortical control of arm movements: A<br>dynamical systems perspective. Annual Review of Neuroscience, 36, 337–359.</p>
+<p>[2] Mante, V., Sussillo, D., Shenoy, K. V., &amp; Newsome, W. T. (2013). Context-dependent<br>computation by recurrent dynamics in prefrontal cortex. Nature, 503(7474), 78–84.</p>
+<p>[3] Chaisangmongkon, W., Swaminathan, S. K., Freedman, D. J., &amp; Wang, X. J. (2017). Computing<br>by Robust Transience: How the Fronto-Parietal Network Performs Sequential, Category-Based<br>Decisions. Neuron, 93(6), 1504-1517.e4.</p>
+<p>[4] Durstewitz, D., Huys, Q. J. M., &amp; Koppe, G. (2020). Psychiatric Illnesses as Disorders of<br>Network Dynamics. Biological Psychiatry: Cognitive Neuroscience and Neuroimaging, Figure 1,<br>1–12.</p>
+<p>[5] Watanabe, T., &amp; Rees, G. (2017). Brain network dynamics in high-functioning individuals with<br>autism. Nature Communications, 8.</p>
+<p>[6] Koppe, G., Toutounji, H., Kirsch, P., Lis, S., &amp; Durstewitz, D. (2019). Identifying nonlinear<br>dynamical systems via generative recurrent neural networks with applications to fMRI. In PLoS<br>Computational Biology (Vol. 15, Issue 8).</p>
+<p>[7] Golub and Sussillo (2018), “FixedPointFinder: A Tensorflow toolbox for identifying and<br>characterizing fixed points in recurrent neural networks,” Journal of Open Source Software,<br>3(31), 1003.</p>
 
         </div>
         <footer class="article-footer">
@@ -242,7 +240,7 @@
 
 
 
-    <a data-url="https://ageyy.github.io/neuroblog/2020/09/09/biophysics/" data-id="ckjpea67h0002yi67fiqr36q0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://ageyy.github.io/neuroblog/2021/01/09/asdynamic/" data-id="ckjpea67f0001yi674edyg8du" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -312,16 +310,16 @@
             "@type": "Person",
             "name": "AgeYY"
         },
-        "headline": "Modeling of Simple Neural Network",
-        "image": "https://ageyy.github.io/neuroblog/neuroblog/2020/09/09/biophysics/ifmodel.jpg",
-        "keywords": "",
-        "genre": "Ref Reading",
-        "datePublished": "2020-09-09",
-        "dateCreated": "2020-09-09",
-        "dateModified": "2020-10-19",
-        "url": "https://ageyy.github.io/neuroblog/2020/09/09/biophysics/",
-        "description": "Mathematical modeling from sub-cell components of a neuron to simple neural network. As part of course Introduction to Neural Computation",
-        "wordCount": 1650
+        "headline": "Autistic Spectrum Disorder From Dynamical Perspective",
+        "image": "https://ageyy.github.io/neuroblog/neuroblog/2021/01/09/asdynamic/asdynamic.jpg",
+        "keywords": "RNN Dynamical System Autistic Spectrum Disorder",
+        "genre": "Ideas",
+        "datePublished": "2021-01-09",
+        "dateCreated": "2021-01-09",
+        "dateModified": "2021-01-09",
+        "url": "https://ageyy.github.io/neuroblog/2021/01/09/asdynamic/",
+        "description": "Finding the causes of autistic spectrum disorder (ASD) from the perspective of dynamical system. Thumbnail adapted from [Shenoy et al. 2013]",
+        "wordCount": 1001
     }
 </script>
 
@@ -370,16 +368,12 @@
         
 <nav id="article-nav">
     
-        <a href="/neuroblog/2020/09/16/hcnn/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Understanding Sensory Cortex via Hierachical Convolutional Neural Networks.
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
+        <a href="/neuroblog/2021/01/02/rnnNeuro/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">RNN as a Tool for Neuroscience</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -392,7 +386,7 @@
     <h3 class="widget-title">Catalog</h3>
     <div class="widget">
         <div id="toc" class="toc-article">
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Membrane"><span class="toc-number">2.</span> <span class="toc-text">Membrane</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Single-Cell"><span class="toc-number">3.</span> <span class="toc-text">Single Cell</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Synapse"><span class="toc-number">4.</span> <span class="toc-text">Synapse</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Simple-Neural-Network"><span class="toc-number">5.</span> <span class="toc-text">Simple Neural Network</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">6.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ref"><span class="toc-number">7.</span> <span class="toc-text">Ref</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Abstract"><span class="toc-number">1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Background"><span class="toc-number">2.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Research-Plan"><span class="toc-number">3.</span> <span class="toc-text">Research Plan</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Some-Comments"><span class="toc-number">4.</span> <span class="toc-text">Some Comments</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ref"><span class="toc-number">5.</span> <span class="toc-text">Ref</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -577,7 +571,7 @@
     var disqus_shortname = 'neuroblog';
     
     
-    var disqus_url = 'https://ageyy.github.io/neuroblog/2020/09/09/biophysics/';
+    var disqus_url = 'https://ageyy.github.io/neuroblog/2021/01/09/asdynamic/';
     
     (function() {
     var dsq = document.createElement('script');
